@@ -1,4 +1,6 @@
-class Employee{
+import * as UserLogin from './interface';
+
+class Employee implements UserLogin.Login{
    #id:number; 
 
    name:string;
@@ -15,6 +17,9 @@ class Employee{
     getNameWithAddress():string {
         return `${this.name} stays at ${this.address}`;
     }
+    login(): UserLogin.User {
+        return {name:"John", id:1, email:"john@jmail.com" , };
+    }
 }
 
 let john = new Employee(1, "John", "Highway 71");
@@ -24,3 +29,4 @@ let john = new Employee(1, "John", "Highway 71");
 // john.address = "Highway 71";
 
 console.log(john);
+
