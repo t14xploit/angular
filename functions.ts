@@ -26,3 +26,11 @@ const multiply = function(a:number, b:number):number{
 
 let product = multiply(10,20);
 console.log(product);
+
+
+function add2(a:number, b:number, ...rest:number[]){
+    return a+b+rest.reduce((a,b)=>a+b,0);
+}
+
+let numbers = [1,2,3,4,5];
+console.log(add2(2,3, ...numbers))
