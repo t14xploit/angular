@@ -33,4 +33,16 @@ function add2(a:number, b:number, ...rest:number[]){
 }
 
 let numbers = [1,2,3,4,5];
-console.log(add2(2,3, ...numbers))
+console.log(add2(2,3, ...numbers));
+
+console.log(add2(2,3, ...[5,6,7,8,9]));
+
+
+
+//generic
+function getItems<Type>(items:Type[]):Type[]{
+    return new Array<Type>().concat(items);
+}
+
+let concatResult = getItems<number>([1,2,3,4,5]);
+let concatString = getItems(["a","b","c","d","e"]);
