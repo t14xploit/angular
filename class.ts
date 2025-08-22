@@ -1,5 +1,5 @@
 class Employee{
-   id:number; 
+   #id:number; 
 
    name:string;
 
@@ -7,9 +7,13 @@ class Employee{
 
    //multiple contructors not allowed in typescript
    constructor(id:number, name:string, address:string){
-        this.id = id;
+        this.#id = id;
         this.name = name;
         this.address = address;
+    }
+
+    getNameWithAddress():string {
+        return `${this.name} stays at ${this.address}`;
     }
 }
 
