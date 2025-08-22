@@ -18,3 +18,12 @@ Features of Angular:
 
 
 
+________
+
+SPA
+
+SPA does not make requests to server for every URL requests. 
+
+How Angular Helps? 
+-Angular has Routing functionality to create SPA
+-Angular also offers SSR which supports SPA.
